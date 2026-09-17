@@ -1,4 +1,5 @@
 **📊 Tableau de Bord de l'Économie de Madagascar**
+![Sarin'ny Dashboard](dashboard.png)
 
 Ity dia tetikasa fampisehoana data (Data Visualisation) mikasika ny toekaren'i Madagasikara. Natao manokana hanehoana ny fahaizana mandamina tarehimarika saro-pantarina ho lasa fitaovana tsotra sy madio ho an'ny mpijery.
 
