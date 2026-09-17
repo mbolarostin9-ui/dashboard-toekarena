@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="mg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Toekarena Madagascar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Lohateny Lehibe -->
+    <header>
+        <h1>Tableau de Bord: Économie de Madagascar</h1>
+        <p>Famakafakana ny tarehimarika fototra amin'ny tontolo ara-toekarena.</p>
+    </header>
+
+    <main class="dashboard-container">
+        
+        <!-- CARD 1: Statistique Fototra -->
+        <div class="card card-principale">
+            <h3>Harinkarena Faobe (PIB)</h3>
+            <p class="valeur-data">16.3 Billions USD</p>
+            <span class="tendance haut">↑ +4.2% tamin'ny herintaona</span>
+        </div>
+
+        <!-- CARD 2: Sehatra Mpanafarana Entana -->
+        <div class="card">
+            <h3>Ireo Sehatra Tena Mampidi-vola</h3>
+            <ul class="liste-data">
+                <li>Lavanila sy Epices: <span>25%</span></li>
+                <li>Harena an-kibon'ny tany: <span>20%</span></li>
+                <li>Textile (Zone Franche): <span>15%</span></li>
+                <li>Toriteny & Fizahan-tany: <span>10%</span></li>
+            </ul>
+        </div>
+
+        <!-- CARD 3: Graphique vita amin'ny CSS -->
+        <div class="card">
+            <h3>Fivoaran'ny Fizahan-tany (Ohatra)</h3>
+            <div class="chart-container">
+                <!-- Ny haavon'ny bar tsirairay dia ovaina amin'ny height CSS -->
+                <div class="bar-chart" style="height: 40%;" data-annee="2024"></div>
+                <div class="bar-chart" style="height: 65%;" data-annee="2025"></div>
+                <div class="bar-chart" style="height: 85%;" data-annee="2026"></div>
+            </div>
+        </div>
+                <!-- CARD 4: Tabilao Fampitahana ny Vidin'ny PPN -->
+        <div class="card card-tabilao">
+            <h3>Fampitahana ny Vidin'ny PPN (Salan'isa)</h3>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Entana</th>
+                            <th>Vidy tamin'ny Herintaona</th>
+                            <th>Vidy Ankehitriny</th>
+                            <th>Fiovana (Stat)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Vary (Iray Kilao)</strong></td>
+                            <td>3 200 Ar</td>
+                            <td>3 600 Ar</td>
+                            <td class="statut-fiovana ambony">+12.5%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Menaka (Iray Litatra)</strong></td>
+                            <td>9 500 Ar</td>
+                            <td>9 000 Ar</td>
+                            <td class="statut-fiovana ambany">-5.2%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sazy (Iray Kilao)</strong></td>
+                            <td>4 000 Ar</td>
+                            <td>4 800 Ar</td>
+                            <td class="statut-fiovana ambony">+20.0%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Koba (Iray Kilao)</strong></td>
+                            <td>3 500 Ar</td>
+                            <td>3 500 Ar</td>
+                            <td class="statut-fiovana mitsangana">0.0%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+                <!-- CARD: Kisary Boribory (Pie Chart) -->
+        <div class="card">
+            <h3>Fizaran'ny Sehatra Ara-toekarena</h3>
+            <div class="pie-section">
+                <!-- Ity ny boribory -->
+                <div class="pie-chart"></div>
+                
+                <!-- Ity ny fanazavana ny loko (Légende) -->
+                <div class="pie-legende">
+                    <div class="legende-item"><span class="loko-lavanila"></span> Lavanila (25%)</div>
+                    <div class="legende-item"><span class="loko-harena"></span> Harena an-kibon'ny tany (20%)</div>
+                    <div class="legende-item"><span class="loko-textile"></span> Textile (15%)</div>
+                    <div class="legende-item"><span class="loko-tourisme"></span> Fizahan-tany (10%)</div>
+                    <div class="legende-item"><span class="loko-hafa"></span> Hafa (30%)</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>@ Tetikasa Portfolio - Data Visualisation by M.Rostin @</p>
+    </footer>
+
+</body>
+</html>

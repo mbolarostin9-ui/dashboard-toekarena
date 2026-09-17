@@ -1,0 +1,223 @@
+/* Famolavolana ankapobeny */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #2c3e50;
+    font-size: 2rem;
+}
+
+header p {
+    color: #7f8c8d;
+}
+
+/* Layout an'ny Dashboard mampiasa CSS Grid */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Endriky ny Cards */
+.card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #3498db;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.valeur-data {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.tendance.haut {
+    color: #27ae60;
+    font-weight: 500;
+}
+
+/* Lisitry ny Data */
+.liste-data li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.liste-data li span {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* CSS Bar Chart (Fanaovana Kisary) */
+.chart-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 150px;
+    border-bottom: 2px solid #ccc;
+    padding-top: 20px;
+}
+
+.bar-chart {
+    width: 40px;
+    background-color: #3498db;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.bar-chart:hover {
+    background-color: #2980b9;
+}
+
+/* Mampiseho ny taona eo ambanin'ny bar */
+.bar-chart::after {
+    content: attr(data-annee);
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: #7f8c8d;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #bdc3c7;
+    font-size: 0.9rem;
+}
+
+/* Famolavolana ny Tabilao */
+.card-tabilao {
+    grid-column: 1 / -1; /* Mba hivelatra miankavanana tsara ny tabilao */
+}
+
+.table-responsive {
+    overflow-x: auto; /* Mba tsy ho simba ny pejy rehefa jerena amin'ny finday */
+    margin-top: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Manafoana ny elanelana eo amin'ny sisin'ny tabilao */
+    text-align: left;
+}
+
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+tr:hover {
+    background-color: #fcfcfc; /* Miova loko kely ny laharana rehefa lalovan'ny totozy */
+}
+
+/* Loko famantarana ny fiovan'ny data (Data Indicators) */
+.statut-fiovana {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.statut-fiovana.ambony {
+    color: #e74c3c; /* Mena raha nidangana ny vidim-piainana */
+}
+
+.statut-fiovana.ambany {
+    color: #27ae60; /* Maintso raha nidina ny vidiny */
+}
+
+.statut-fiovana.mitsangana {
+    color: #7f8c8d; /* Grise raha tsy niova */
+}
+
+/* Firafitry ny faritra misy ny kisary boribory */
+.pie-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+/* Famoronana ny Pie Chart amin'ny CSS conic-gradient */
+.pie-chart {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Manova ny div ho boribory */
+    background: conic-gradient(
+        #f1c40f 0% 25%,     /* Lavanila: 25% (miainga amin'ny 0 ka hatramin'ny 25) */
+        #e67e22 25% 45%,    /* Harena: 20% (25 + 20 = 45%) */
+        #9b59b6 45% 60%,    /* Textile: 15% (45 + 15 = 60%) */
+        #2ecc71 60% 70%,    /* Fizahan-tany: 10% (60 + 10 = 70%) */
+        #bdc3c7 70% 100%    /* Ny sisa rehetra: 30% (70 ka hatramin'ny 100%) */
+    );
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Fandaminana ny fanazavana ny loko (Légende) */
+.pie-legende {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.legende-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Ireo tapatapany kely maneho loko eo alohan'ny soratra */
+.legende-item span {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+/* Ny loko tsirairay avy mifanaraka amin'ny boribory */
+.loko-lavanila { background-color: #f1c40f; }
+.loko-harena { background-color: #e67e22; }
+.loko-textile { background-color: #9b59b6; }
+.loko-tourisme { background-color: #2ecc71; }
+.loko-hafa { background-color: #bdc3c7; }
